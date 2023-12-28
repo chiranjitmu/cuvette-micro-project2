@@ -381,4 +381,10 @@ main {
     display: none;
     transition: all 1s ease-in;
   }
+  .helpdesk{
+    left: 72%;
+  }
+  .logo-link{
+    margin-top: 17rem;
+  }
 }
