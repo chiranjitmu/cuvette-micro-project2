@@ -249,6 +249,7 @@ main {
 .information {
   background-color: white;
   width: 100%;
+  height: auto;
   padding: 2rem;
   border-radius: 10px;
   height: 85%;
@@ -281,7 +282,7 @@ main {
 
 .next-button {
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1rem;
   float: right;
   display: flex;
   align-items: center;
