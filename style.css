@@ -71,7 +71,7 @@ ul > li:hover{
 /* aside */
 .logo-link {
   position: sticky;
-  top: 12%;
+  top: 15%;
   float: inline-end;
   margin-top: 20rem;
   display: flex;
@@ -281,8 +281,8 @@ main {
 
 .next-button {
   position: relative;
+  margin-top: 2rem;
   float: right;
-  margin-top: 4rem;
   display: flex;
   align-items: center;
   width: 11rem;
