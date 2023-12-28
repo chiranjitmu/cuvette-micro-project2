@@ -385,4 +385,7 @@ main {
   .logo-link{
     margin-top: 17rem;
   }
+  main{
+    margin-left: 3rem;
+  }
 }
