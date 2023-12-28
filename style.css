@@ -2,17 +2,26 @@
 
 body {
   margin: 0;
+  min-width: 310px;
+  overflow-x: hidden;
 }
 
 /* header */
-.header-content {
+header {
   position: fixed;
+  box-sizing: border-box;
   width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: #6f6af7;
   color: white;
+}
+
+.header-content {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  box-sizing: border-box;
 }
 
 #logo {
@@ -32,7 +41,7 @@ ul > li {
   cursor: pointer;
 }
 
-ul > li:hover{
+ul > li:hover {
   opacity: 0.5;
 }
 
@@ -71,7 +80,7 @@ ul > li:hover{
 /* aside */
 .logo-link {
   position: sticky;
-  top: 15%;
+  top: 14%;
   float: inline-end;
   margin-top: 20rem;
   display: flex;
@@ -144,6 +153,9 @@ main {
 .section-2 {
   display: flex;
   gap: 5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   font-family: "DM Sans", sans-serif;
 }
 
@@ -199,9 +211,12 @@ main {
   background-color: #483eff;
   border-radius: 10px;
   width: 70%;
-  height: 50vh;
+  min-width: 200px;
+  height: 100%;
   padding: 3rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -224,7 +239,7 @@ main {
   cursor: pointer;
 }
 
-.button-1:hover{
+.button-1:hover {
   opacity: 0.8;
 }
 
@@ -240,15 +255,16 @@ main {
   cursor: pointer;
 }
 
-.button-2:hover{
+.button-2:hover {
   opacity: 0.8;
   background-color: white;
-  color: #000000
+  color: #000000;
 }
 
 .information {
   background-color: white;
   width: 100%;
+  min-width: 210px;
   height: auto;
   padding: 2rem;
   border-radius: 10px;
@@ -290,7 +306,7 @@ main {
   gap: 0.7rem;
 }
 
-.next-button:hover{
+.next-button:hover {
   opacity: 0.8;
 }
 
@@ -311,4 +327,57 @@ main {
   position: relative;
   right: 3rem;
   background-color: black;
+}
+
+/* large device */
+@media screen and (max-width: 970px) {
+  #logo {
+    font-size: medium;
+    margin-left: 2rem;
+    transition: all 1s ease-in;
+  }
+
+  header {
+    justify-content: space-between;
+    transition: all 1s ease-in;
+  }
+
+  .hamburger-icon {
+    transition: all 1s ease-in;
+    margin-right: 2rem;
+    width: 2rem;
+  }
+
+  ul > li {
+    font-size: medium;
+    transition: all 1s ease-in;
+  }
+
+  .search-input {
+    width: 10rem;
+    transition: all 1s ease-in;
+  }
+
+  .section-1 {
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s ease-in;
+  }
+
+  .section-3 {
+    flex-direction: column;
+    transition: all 1s ease-in;
+  }
+  .info-content {
+    margin-left: -1rem;
+    transition: all 1s ease-in;
+  }
+}
+
+/* medium device */
+@media screen and (max-width: 760px) {
+  nav {
+    display: none;
+    transition: all 1s ease-in;
+  }
 }
