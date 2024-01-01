@@ -49,6 +49,10 @@ ul > li:hover {
   align-items: center;
 }
 
+#search-box:hover{
+ opacity: 1;
+}
+
 .search-input {
   width: 14rem;
   padding: 0.7rem;
