@@ -27,8 +27,17 @@ header {
   font-family: "Delius Unicase", cursive;
 }
 
+#mobile-logo {
+  display: none;
+}
+
+.cancle {
+  display: none;
+}
+
 #nav-links {
   width: 80vw;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -49,8 +58,8 @@ ul > li:hover {
   align-items: center;
 }
 
-#search-box:hover{
- opacity: 1;
+#search-box:hover {
+  opacity: 1;
 }
 
 .search-input {
@@ -70,6 +79,10 @@ ul > li:hover {
 .hamburger-icon {
   width: 2.4rem;
   cursor: pointer;
+}
+
+.mobile-hamburger-icon {
+  display: none;
 }
 
 .helpdesk {
@@ -371,6 +384,7 @@ main {
     flex-direction: column;
     transition: all 1s ease-in;
   }
+
   .info-content {
     margin-left: -1rem;
     transition: all 1s ease-in;
@@ -379,17 +393,65 @@ main {
 
 /* medium device */
 @media screen and (max-width: 760px) {
-  nav {
+  #nav-links {
     display: none;
-    transition: all 1s ease-in;
+    flex-direction: column;
+    padding: 0;
+    background-color: white;
+    color: black;
+    min-width: 350px;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 25rem;
+    border-bottom: 2px solid black;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
   }
-  .helpdesk{
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .mobile-hamburger-icon {
+    display: block;
+    margin-right: 2rem;
+    width: 2rem;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .cancle {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-right: 5rem;
+  }
+
+  .cancle-icon {
+    width: 2rem;
+  }
+
+  #mobile-logo {
+    display: block;
+    font-family: "Delius Unicase", cursive;
+    font-size: medium;
+    margin-left: 2rem;
+  }
+
+  .helpdesk {
     left: 72%;
   }
-  .logo-link{
+
+  .logo-link {
     margin-top: 17rem;
   }
-  main{
+
+  main {
     margin-left: 3rem;
   }
 }

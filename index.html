@@ -13,8 +13,18 @@
     <header>
       <div class="header-content">
         <h1 id="logo">dappr</h1>
+        <!-- mobile-logo -->
+        <h1 id="mobile-logo">dappr</h1>
         <nav>
           <ul type="none" id="nav-links">
+            <li class="cancle">
+              <img
+                src="./assets/cancle-icon.jpg"
+                alt="cancle-icon"
+                class="cancle-icon"
+                onclick="hamburgerClose()"
+              />
+            </li>
             <li>Home</li>
             <li>About Us</li>
             <li>Information</li>
@@ -38,6 +48,13 @@
         src="./assets/hamburger-vector.png"
         alt="hamburger"
         class="hamburger-icon"
+      />
+      <!-- mobile hamburger -->
+      <img
+        src="./assets/hamburger-vector.png"
+        alt="hamburger"
+        class="mobile-hamburger-icon"
+        onclick="hamburgerOpen()"
       />
       <img src="./assets/helpdesk.png" alt="helpdesk" class="helpdesk" />
     </header>
@@ -123,5 +140,36 @@
         </section>
       </section>
     </main>
+    <script type="text/javascript">
+      const hamburger = document.getElementsByClassName(
+        "mobile-hamburger-icon"
+      )[0];
+      const logolink = document.getElementsByClassName("logo-link")[0];
+      const logo = document.getElementById("mobile-logo");
+      const navlinks = document.getElementById("nav-links");
+      const body = document.querySelector("body");
+
+      const hamburgerOpen = () => {
+        navlinks.style.display = "flex";
+        setTimeout(() => {
+          navlinks.style.opacity = "1";
+        }, 10);
+        hamburger.style.display = "none";
+        logo.style.display = "none";
+        logolink.style.display = "none";
+        body.style.overflow = "hidden";
+      };
+
+      const hamburgerClose = () => {
+        navlinks.style.display = "none";
+        setTimeout(() => {
+          navlinks.style.opacity = "0";
+        }, 10);
+        hamburger.style.display = "block";
+        logo.style.display = "block";
+        logolink.style.display = "flex";
+        body.style.overflow = "auto";
+      };
+    </script>
   </body>
 </html>
