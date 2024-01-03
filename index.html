@@ -151,9 +151,6 @@
 
       const hamburgerOpen = () => {
         navlinks.style.display = "flex";
-        setTimeout(() => {
-          navlinks.style.opacity = "1";
-        }, 10);
         hamburger.style.display = "none";
         logo.style.display = "none";
         logolink.style.display = "none";
@@ -162,9 +159,6 @@
 
       const hamburgerClose = () => {
         navlinks.style.display = "none";
-        setTimeout(() => {
-          navlinks.style.opacity = "0";
-        }, 10);
         hamburger.style.display = "block";
         logo.style.display = "block";
         logolink.style.display = "flex";

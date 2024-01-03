@@ -406,8 +406,24 @@ main {
     gap: 3rem;
     margin-top: 25rem;
     border-bottom: 2px solid black;
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
+    animation: hamburger 3s;
+  }
+
+  @keyframes hamburger {
+    from {
+      position: absolute;
+      top: -20rem;
+      margin-top: -20rem;
+      height: 0vh;
+      opacity: 0;
+    }
+    to {
+      position: absolute;
+      top: 20rem;
+      margin-top: -27rem;
+      height: 100vh;
+      opacity: 1;
+    }
   }
 
   .hamburger-icon {
